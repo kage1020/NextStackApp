@@ -5,29 +5,35 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        base: [
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'Segoe UI',
-          'Roboto',
-          'Oxygen',
-          'Ubuntu',
-          'Cantarell',
-          'Fira Sans',
-          'Droid Sans',
-          'Helvetica Neue',
-          'sans-serif',
-        ],
-        code: [
+        mono: [
+          'ui-monospace',
           'Menlo',
           'Monaco',
-          'Lucida Console',
-          'Liberation Mono',
-          'DejaVu Sans Mono',
-          'Bitstream Vera Sans Mono',
+          'Cascadia Mono',
+          'Segoe UI Mono',
+          'Roboto Mono',
+          'Oxygen Mono',
+          'Ubuntu Monospace',
+          'Source Code Pro',
+          'Fira Mono',
+          'Droid Sans Mono',
           'Courier New',
           'monospace',
         ],
+      },
+      keyframes: {
+        rotate: {
+          from: {
+            transform: 'rotate(360deg)',
+          },
+          to: {
+            transform: 'rotate(0deg)',
+          },
+        },
+      },
+      screens: {
+        tablet: '701px',
+        desktop: '1121px',
       },
     },
   },

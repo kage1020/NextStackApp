@@ -1,9 +1,9 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
-const MyApp = () => {
+const Document = () => {
   return (
     <Html lang='ja'>
-      <Head></Head>
+      <Head />
       <body>
         <Main />
         <NextScript />
@@ -12,4 +12,4 @@ const MyApp = () => {
   )
 }
 
-export default MyApp
+export default Document
