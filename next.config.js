@@ -1,7 +1,12 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /** @type {import('next').NextConfig} */
 
-const withPWA = require('next-pwa')
-const withAnalyzer = require('@next/bundle-analyzer')
+const withAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
+const withPWA = require('next-pwa')({
+  dest: './public',
+})
 
 const nextConfig = {
   reactStrictMode: true,
