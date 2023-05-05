@@ -5,8 +5,7 @@ import GoogleProvider from 'next-auth/providers/google'
 
 import prisma from '@/libs/prisma'
 
-import type { NextAuthOptions, Session, User } from 'next-auth'
-import type { JWT } from 'next-auth/jwt'
+import type { NextAuthOptions } from 'next-auth'
 
 export const authOptions: NextAuthOptions = {
   secret: process.env.NEXTAUTH_SECRET,
@@ -19,10 +18,10 @@ export const authOptions: NextAuthOptions = {
   },
   adapter: PrismaAdapter(prisma),
   callbacks: {
-    jwt: async ({ token, user }: { token: JWT; user?: User }) => {
+    jwt: async ({ token, user, trigger, session }) => {
       return token
     },
-    session: async ({ session, token }: { session: Session; token: JWT }) => {
+    session: async ({ session, token, trigger, newSession }) => {
       return session
     },
   },
