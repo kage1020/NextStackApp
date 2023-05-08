@@ -3,7 +3,7 @@ import NextAuth from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import GoogleProvider from 'next-auth/providers/google'
 
-import prisma from '@/libs/prisma'
+import prisma from '@/_libs/prisma'
 
 import type { NextAuthOptions } from 'next-auth'
 
