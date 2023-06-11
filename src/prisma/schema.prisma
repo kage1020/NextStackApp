@@ -8,7 +8,7 @@ generator client {
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
-  relationMode = "prisma"
+  relationMode = "prisma"       // for PlanetScale
 }
 
 model Account {
